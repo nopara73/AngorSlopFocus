@@ -229,6 +229,7 @@ ul {
   grid-template-columns: 1fr;
   gap: 30px;
   align-items: center;
+  justify-items: center;
   min-height: auto;
   padding: 48px 0 88px;
 }
@@ -258,8 +259,10 @@ ul {
 }
 
 .hero-copy {
+  width: min(100%, 860px);
   max-width: 860px;
   min-width: 0;
+  justify-self: center;
 }
 
 .eyebrow {
@@ -331,7 +334,7 @@ ul {
   transform-style: preserve-3d;
   min-width: 0;
   width: min(100%, 760px);
-  justify-self: start;
+  justify-self: center;
 }
 
 .hero-stage-shell {
@@ -831,6 +834,31 @@ ul {
 
   .card-comms {
     grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1180px) {
+  .hero {
+    grid-template-columns: minmax(0, 560px) minmax(420px, 1fr);
+    gap: 48px;
+    justify-items: stretch;
+    min-height: calc(100vh - 120px);
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 560px;
+    justify-self: start;
+  }
+
+  .hero-stage {
+    width: 100%;
+    max-width: 620px;
+    justify-self: end;
+  }
+
+  .hero h1 {
+    line-height: 0.9;
   }
 }
 
