@@ -259,6 +259,7 @@ ul {
 
 .hero-copy {
   max-width: 720px;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -270,9 +271,10 @@ ul {
 .hero h1 {
   margin-top: 18px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(4.2rem, 10vw, 8.2rem);
-  line-height: 0.88;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.92;
   letter-spacing: -0.07em;
+  max-width: 8.5ch;
 }
 
 .hero h1 span {
@@ -332,6 +334,7 @@ ul {
 .hero-stage-shell {
   position: relative;
   min-height: 690px;
+  padding: 24px;
   border-radius: 36px;
   border: 1px solid var(--border);
   background:
@@ -390,14 +393,15 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 240px;
-  height: 240px;
-  padding: 28px;
+  width: 220px;
+  height: 220px;
+  padding: 24px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   display: grid;
   place-content: center;
   text-align: center;
+  z-index: 1;
 }
 
 .core-kicker,
@@ -412,53 +416,54 @@ ul {
 .core-node strong {
   margin-top: 10px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 1;
 }
 
 .core-node p {
   margin-top: 12px;
   color: var(--muted);
-  line-height: 1.6;
-  font-size: 0.94rem;
+  line-height: 1.5;
+  font-size: 0.88rem;
 }
 
 .floating-card {
   position: absolute;
-  width: min(260px, calc(100% - 36px));
-  padding: 20px 20px 22px;
+  width: min(240px, calc(100% - 36px));
+  padding: 18px 18px 20px;
   border-radius: 24px;
+  z-index: 2;
 }
 
 .floating-card strong {
   display: block;
   margin-top: 10px;
-  font-size: 1.18rem;
+  font-size: 1.06rem;
   line-height: 1.2;
 }
 
 .floating-card p {
   margin-top: 10px;
   color: var(--muted);
-  line-height: 1.7;
-  font-size: 0.96rem;
+  line-height: 1.55;
+  font-size: 0.9rem;
 }
 
 .card-milestones {
-  top: 68px;
-  left: 36px;
+  top: 34px;
+  left: 28px;
   animation: float 6.5s ease-in-out infinite;
 }
 
 .card-backers {
-  right: 34px;
-  top: 190px;
+  right: 28px;
+  top: 156px;
   animation: float 7.5s ease-in-out infinite 0.5s;
 }
 
 .card-comms {
-  left: 90px;
-  bottom: 72px;
+  left: 28px;
+  bottom: 34px;
   animation: float 7s ease-in-out infinite 1s;
 }
 
@@ -469,23 +474,23 @@ ul {
 }
 
 .rail-one {
-  top: 184px;
-  left: 164px;
-  width: 230px;
+  top: 156px;
+  left: 152px;
+  width: 170px;
   transform: rotate(20deg);
 }
 
 .rail-two {
-  top: 304px;
-  right: 170px;
-  width: 200px;
+  top: 272px;
+  right: 150px;
+  width: 150px;
   transform: rotate(-18deg);
 }
 
 .rail-three {
-  bottom: 174px;
-  left: 196px;
-  width: 180px;
+  bottom: 144px;
+  left: 168px;
+  width: 140px;
   transform: rotate(-24deg);
 }
 
@@ -576,58 +581,6 @@ ul {
 .comparison-heading p {
   margin-top: 14px;
   max-width: 720px;
-}
-
-.comparison-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-  margin-top: 34px;
-}
-
-.comparison-card {
-  padding: 28px;
-  border-radius: 30px;
-}
-
-.comparison-muted {
-  opacity: 0.82;
-}
-
-.comparison-highlight {
-  border-color: var(--border-strong);
-  background:
-    radial-gradient(circle at top right, rgba(124, 232, 255, 0.14), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
-    rgba(12, 20, 36, 0.9);
-}
-
-.comparison-title {
-  color: var(--text);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.comparison-card ul {
-  margin-top: 20px;
-  display: grid;
-  gap: 14px;
-}
-
-.comparison-card li {
-  position: relative;
-  padding-left: 24px;
-}
-
-.comparison-card li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 11px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
 }
 
 .flow-line {
@@ -815,7 +768,6 @@ ul {
   .hero,
   .trust-band,
   .manifesto,
-  .comparison-grid,
   .flow-line {
     grid-template-columns: 1fr;
   }
@@ -823,6 +775,11 @@ ul {
   .hero {
     min-height: auto;
     padding-top: 30px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.6rem, 7vw, 5.8rem);
+    max-width: 9ch;
   }
 
   .flow-line::before {
@@ -834,7 +791,43 @@ ul {
   }
 
   .hero-stage-shell {
-    min-height: 620px;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+    padding: 24px;
+  }
+
+  .core-node {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    min-height: 170px;
+    transform: none;
+    border-radius: 28px;
+    place-content: center;
+  }
+
+  .orbit,
+  .stage-rail {
+    display: none;
+  }
+
+  .floating-card {
+    position: relative;
+    width: 100%;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    animation: none;
+  }
+
+  .card-comms {
+    grid-column: 1 / -1;
   }
 }
 
@@ -861,7 +854,8 @@ ul {
   }
 
   .hero h1 {
-    font-size: clamp(3.1rem, 17vw, 5rem);
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
+    max-width: 8ch;
   }
 
   .hero-text {
@@ -874,51 +868,17 @@ ul {
   }
 
   .hero-stage-shell {
-    min-height: 660px;
+    grid-template-columns: 1fr;
   }
 
   .core-node {
-    width: 210px;
-    height: 210px;
-    padding: 22px;
-  }
-
-  .orbit-one {
-    width: 360px;
-    height: 360px;
-  }
-
-  .orbit-two {
-    width: 250px;
-    height: 250px;
-  }
-
-  .card-milestones {
-    top: 22px;
-    left: 18px;
-  }
-
-  .card-backers {
-    top: 152px;
-    right: 18px;
-  }
-
-  .card-comms {
-    left: 18px;
-    bottom: 24px;
-  }
-
-  .rail-one,
-  .rail-two,
-  .rail-three {
-    display: none;
+    min-height: 150px;
   }
 
   .hero-metrics {
     grid-template-columns: 1fr;
   }
 
-  .comparison-card,
   .flow-card,
   .manifesto-card,
   .cta-card,

@@ -13,7 +13,7 @@
     <title>Angor | Decentralized Kickstarter</title>
     <script>
       (function () {
-        var buildVersion = "20260416-focus-3";
+        var buildVersion = "20260416-focus-4";
         var url = new URL(window.location.href);
         if (url.searchParams.get("v") !== buildVersion) {
           url.searchParams.set("v", buildVersion);
@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260416-focus-3" />
+    <link rel="stylesheet" href="styles.css?v=20260416-focus-4" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -41,23 +41,21 @@
           <span class="brand-mark"></span>
           <span>ANGOR</span>
         </a>
-        <div class="topbar-copy">Bitcoin-native funding for ambitious launches</div>
+        <div class="topbar-copy">Crowdfunding on Bitcoin</div>
         <a class="button button-small" href="https://angor.io/launch">Launch on Angor</a>
       </header>
 
       <main>
         <section class="hero" id="hero">
           <div class="hero-copy reveal">
-            <p class="eyebrow">The only page that matters is the one that gets founders to launch</p>
+            <p class="eyebrow">Crowdfunding on Bitcoin, made simpler</p>
             <h1>
               <span>DECENTRALIZED</span>
               <span class="headline-accent">KICKSTARTER</span>
             </h1>
             <p class="hero-text">
-              Angor gives founders a stronger story than ordinary crowdfunding:
-              raise on Bitcoin, communicate over Nostr, unlock capital by
-              milestones, and let the protocol create the trust instead of
-              asking people to take it on faith.
+              Angor helps founders raise on Bitcoin with milestone-based funding
+              and better backer protection.
             </p>
 
             <div class="hero-actions">
@@ -65,11 +63,11 @@
             </div>
 
             <div class="hero-support">
-              <p class="support-line">Focused for one conversion goal: get the founder to start a raise.</p>
+              <p class="support-line">One clear message. One clear next step.</p>
               <ul class="signal-strip" aria-label="Core Angor strengths">
-                <li>Bitcoin-secured funding</li>
-                <li>Milestone-based release logic</li>
-                <li>Nostr-native transparency</li>
+                <li>Bitcoin-native</li>
+                <li>Milestone-based</li>
+                <li>Backer protection</li>
               </ul>
             </div>
           </div>
@@ -80,26 +78,26 @@
               <div class="orbit orbit-two"></div>
               <div class="core-node">
                 <span class="core-kicker">Angor</span>
-                <strong>Trust Engine</strong>
-                <p>Funding credibility designed into the protocol.</p>
+                <strong>Bitcoin</strong>
+                <p>Funding with clearer rules.</p>
               </div>
 
               <article class="floating-card card-milestones">
                 <span class="card-label">Milestone release</span>
-                <strong>Capital unlocks with progress</strong>
-                <p>Funding moves in stages instead of vanishing into a black box.</p>
+                <strong>Funds unlock by milestone</strong>
+                <p>Progress comes first.</p>
               </article>
 
               <article class="floating-card card-backers">
                 <span class="card-label">Backer protection</span>
                 <strong>Unused funds stay recoverable</strong>
-                <p>Trust becomes a mechanism, not a marketing line.</p>
+                <p>Less blind trust.</p>
               </article>
 
               <article class="floating-card card-comms">
-                <span class="card-label">Open coordination</span>
-                <strong>Nostr keeps the project visible</strong>
-                <p>Updates, signals, and project context live in a more open communication layer.</p>
+                <span class="card-label">Open updates</span>
+                <strong>Projects stay visible</strong>
+                <p>Communication stays in the open.</p>
               </article>
 
               <div class="stage-rail rail-one"></div>
@@ -109,12 +107,12 @@
 
             <div class="hero-metrics">
               <div>
-                <span class="metric-label">Positioning</span>
-                <strong>The only Bitcoin protocol for funding projects</strong>
+                <span class="metric-label">Message</span>
+                <strong>Kickstarter, rebuilt for Bitcoin</strong>
               </div>
               <div>
-                <span class="metric-label">Conversion idea</span>
-                <strong>One promise. One CTA. Zero distraction.</strong>
+                <span class="metric-label">Action</span>
+                <strong>Launch on Angor</strong>
               </div>
             </div>
           </div>
@@ -122,103 +120,66 @@
 
         <section class="trust-band reveal">
           <div class="trust-band-copy">
-            <p class="section-label">Why this feels different</p>
-            <h2>Trust is not requested. It is architected.</h2>
+            <p class="section-label">Why it is simpler</p>
+            <h2>Three ideas are enough.</h2>
           </div>
           <div class="trust-points">
             <article>
               <strong>Built on Bitcoin</strong>
-              <p>Security and settlement anchored to the strongest value layer on the internet.</p>
+              <p>Use Bitcoin as the funding layer.</p>
             </article>
             <article>
-              <strong>Aligned by milestones</strong>
-              <p>Founders earn releases through visible progress instead of vague promises.</p>
+              <strong>Released by milestone</strong>
+              <p>Funding unlocks as work gets done.</p>
             </article>
             <article>
-              <strong>Open by default</strong>
-              <p>Nostr keeps project communication closer to public infrastructure than platform lock-in.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section comparison reveal">
-          <div class="section-heading comparison-heading">
-            <p class="section-label">Why founders remember it</p>
-            <h2>Angor is the anti-black-box crowdfunding page.</h2>
-            <p>
-              Most crowdfunding asks people to trust the platform, trust the creator,
-              and trust the process. Angor compresses that uncertainty into a much
-              sharper proposition.
-            </p>
-          </div>
-
-          <div class="comparison-grid">
-            <article class="comparison-card comparison-muted">
-              <span class="comparison-title">Ordinary crowdfunding</span>
-              <ul>
-                <li>Funds are handed over with softer accountability.</li>
-                <li>Communication depends on the platform experience.</li>
-                <li>Backer trust is mostly emotional and brand-driven.</li>
-                <li>The value proposition feels familiar and easy to ignore.</li>
-              </ul>
-            </article>
-
-            <article class="comparison-card comparison-highlight">
-              <span class="comparison-title">Angor</span>
-              <ul>
-                <li>Funding is milestone-based and visibly structured.</li>
-                <li>Backer protection is closer to protocol behavior than policy.</li>
-                <li>Bitcoin and Nostr make the stack feel meaningfully different.</li>
-                <li>The pitch becomes instantly memorable: decentralized Kickstarter.</li>
-              </ul>
+              <strong>Better for backers</strong>
+              <p>Unused funds stay recoverable.</p>
             </article>
           </div>
         </section>
 
         <section class="section launch-flow reveal">
           <div class="section-heading">
-            <p class="section-label">Single-goal narrative</p>
-            <h2>Everything on the page drives the founder toward launching.</h2>
+            <p class="section-label">How it works</p>
+            <h2>A funding flow people can understand quickly.</h2>
           </div>
 
           <div class="flow-line">
             <article class="flow-card">
               <span class="flow-number">01</span>
-              <h3>Frame the raise</h3>
-              <p>Turn your project into a milestone-backed funding story that serious backers can understand fast.</p>
+              <h3>Create the raise</h3>
+              <p>Set the target and define the milestones.</p>
             </article>
             <article class="flow-card">
               <span class="flow-number">02</span>
-              <h3>Raise in public</h3>
-              <p>Use Bitcoin-native credibility and Nostr visibility to feel more transparent than a normal campaign page.</p>
+              <h3>Get funded</h3>
+              <p>Backers support the project on Bitcoin.</p>
             </article>
             <article class="flow-card">
               <span class="flow-number">03</span>
-              <h3>Unlock with proof</h3>
-              <p>Progress becomes part of the financing mechanism, which is exactly what makes the product memorable.</p>
+              <h3>Unlock by progress</h3>
+              <p>Funds release as milestones are completed.</p>
             </article>
           </div>
         </section>
 
         <section class="section manifesto reveal">
           <div class="manifesto-copy">
-            <p class="section-label">Founder-facing takeaway</p>
-            <h2>If Kickstarter were rebuilt for Bitcoin, transparency, and real accountability, it would look like Angor.</h2>
+            <p class="section-label">The pitch</p>
+            <h2>Angor is decentralized Kickstarter.</h2>
             <p>
-              This design leans into that truth as the big idea. The visual system
-              feels premium and protocol-native, the messaging is sharper, and every
-              section exists to make the founder want to click the same next step.
+              That is the whole idea. Everything else should simply support it.
             </p>
           </div>
 
           <div class="manifesto-card">
             <div class="manifesto-stack">
               <span>Bitcoin</span>
-              <span>Nostr</span>
               <span>Milestones</span>
-              <span>Launch</span>
+              <span>Protection</span>
             </div>
-            <p class="quote">The protocol looks serious. The page feels serious. The action feels obvious.</p>
+            <p class="quote">Simple message. Strong product. Obvious action.</p>
           </div>
         </section>
 
@@ -240,6 +201,6 @@
       </div>
     </div>
 
-    <script src="script.js?v=20260416-focus-3"></script>
+    <script src="script.js?v=20260416-focus-4"></script>
   </body>
 </html>
