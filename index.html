@@ -11,13 +11,23 @@
       content="Angor is the decentralized Kickstarter built on Bitcoin and Nostr for milestone-based project funding."
     />
     <title>Angor | Decentralized Kickstarter</title>
+    <script>
+      (function () {
+        var buildVersion = "20260416-focus-3";
+        var url = new URL(window.location.href);
+        if (url.searchParams.get("v") !== buildVersion) {
+          url.searchParams.set("v", buildVersion);
+          window.location.replace(url.toString());
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260416-focus-2" />
+    <link rel="stylesheet" href="styles.css?v=20260416-focus-3" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -230,6 +240,6 @@
       </div>
     </div>
 
-    <script src="script.js?v=20260416-focus-2"></script>
+    <script src="script.js?v=20260416-focus-3"></script>
   </body>
 </html>
