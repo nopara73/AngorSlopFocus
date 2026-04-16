@@ -331,7 +331,7 @@ ul {
   transform-style: preserve-3d;
   min-width: 0;
   width: min(100%, 760px);
-  justify-self: end;
+  justify-self: start;
 }
 
 .hero-stage-shell {
@@ -831,27 +831,6 @@ ul {
 
   .card-comms {
     grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 1500px) {
-  .hero {
-    grid-template-columns: minmax(0, 1.08fr) minmax(340px, 420px);
-    gap: 40px;
-    min-height: calc(100vh - 120px);
-  }
-
-  .hero-copy {
-    max-width: 720px;
-  }
-
-  .hero h1 {
-    font-size: clamp(3.2rem, 6vw, 5.4rem);
-    max-width: 7.1ch;
-  }
-
-  .hero-stage {
-    width: 100%;
   }
 }
 
