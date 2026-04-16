@@ -271,10 +271,10 @@ ul {
 .hero h1 {
   margin-top: 18px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3.1rem, 9vw, 5.4rem);
+  font-size: var(--hero-title-size, clamp(2.6rem, 8vw, 5.4rem));
   line-height: 0.92;
   letter-spacing: -0.07em;
-  max-width: 7.4ch;
+  max-width: 100%;
 }
 
 .hero h1 span {
