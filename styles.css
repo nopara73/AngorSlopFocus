@@ -226,10 +226,10 @@ ul {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 420px);
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   align-items: center;
-  min-height: calc(100vh - 120px);
+  min-height: auto;
   padding: 48px 0 88px;
 }
 
@@ -258,7 +258,7 @@ ul {
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 860px;
   min-width: 0;
 }
 
@@ -271,10 +271,10 @@ ul {
 .hero h1 {
   margin-top: 18px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3.2rem, 6.6vw, 5.8rem);
+  font-size: clamp(3.1rem, 9vw, 5.4rem);
   line-height: 0.92;
   letter-spacing: -0.07em;
-  max-width: 7.2ch;
+  max-width: 7.4ch;
 }
 
 .hero h1 span {
@@ -330,6 +330,8 @@ ul {
   position: relative;
   transform-style: preserve-3d;
   min-width: 0;
+  width: min(100%, 760px);
+  justify-self: end;
 }
 
 .hero-stage-shell {
@@ -832,25 +834,24 @@ ul {
   }
 }
 
-@media (max-width: 1320px) {
+@media (min-width: 1500px) {
   .hero {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    min-height: auto;
+    grid-template-columns: minmax(0, 1.08fr) minmax(340px, 420px);
+    gap: 40px;
+    min-height: calc(100vh - 120px);
   }
 
   .hero-copy {
-    max-width: 860px;
+    max-width: 720px;
   }
 
   .hero h1 {
-    font-size: clamp(3.1rem, 9vw, 5.4rem);
-    max-width: 7.4ch;
+    font-size: clamp(3.2rem, 6vw, 5.4rem);
+    max-width: 7.1ch;
   }
 
   .hero-stage {
-    width: min(100%, 760px);
-    justify-self: end;
+    width: 100%;
   }
 }
 
